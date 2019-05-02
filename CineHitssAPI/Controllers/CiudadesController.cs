@@ -4,12 +4,11 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using CineHitss;
+using CineHitssAPI;
 
-namespace CineHitss.Controllers
+namespace CineHitssAPI.Controllers
 {
     public class CiudadesController : ApiController
     {
@@ -35,7 +34,7 @@ namespace CineHitss.Controllers
             }
             return Ok(ciudad);
         }
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)

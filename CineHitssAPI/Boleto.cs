@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CineHitss
+namespace CineHitssAPI
 {
     using System;
     using System.Collections.Generic;

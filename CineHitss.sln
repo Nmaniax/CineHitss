@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineHitss", "CineHitss\CineHitss.csproj", "{5AC9783E-ED9C-464B-8C4B-01FBBA72C438}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineHitssAPI", "CineHitssAPI\CineHitssAPI.csproj", "{43BEA506-13E4-478A-B774-CA1040659A3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AC9783E-ED9C-464B-8C4B-01FBBA72C438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AC9783E-ED9C-464B-8C4B-01FBBA72C438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AC9783E-ED9C-464B-8C4B-01FBBA72C438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BEA506-13E4-478A-B774-CA1040659A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BEA506-13E4-478A-B774-CA1040659A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BEA506-13E4-478A-B774-CA1040659A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BEA506-13E4-478A-B774-CA1040659A3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

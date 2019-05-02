@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CineHitss
+namespace CineHitssAPI
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Cine
+    public partial class Ciudad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cine()
+        public Ciudad()
         {
-            this.Peliculas = new HashSet<Pelicula>();
+            this.Cines = new HashSet<Cine>();
         }
     
         public int ID { get; set; }
         public string Nombre { get; set; }
-        public string Direccion { get; set; }
-        public Nullable<int> Ciudad_ID { get; set; }
     
-        public virtual Ciudad Ciudad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pelicula> Peliculas { get; set; }
+        public virtual ICollection<Cine> Cines { get; set; }
     }
 }

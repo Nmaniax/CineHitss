@@ -7,29 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CineHitss
+namespace CineHitssAPI
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Funcion
+    public partial class Cine
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Funcion()
+        public Cine()
         {
-            this.Boletoes = new HashSet<Boleto>();
+            this.Peliculas = new HashSet<Pelicula>();
         }
     
         public int ID { get; set; }
-        public string Hora { get; set; }
-        public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<int> Sala { get; set; }
-        public Nullable<int> Disponibilidad { get; set; }
-        public Nullable<double> Precio { get; set; }
-        public Nullable<int> Pelicula_ID { get; set; }
+        public string Nombre { get; set; }
+        public string Direccion { get; set; }
+        public Nullable<int> Ciudad_ID { get; set; }
     
+        public virtual Ciudad Ciudad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Boleto> Boletoes { get; set; }
-        public virtual Pelicula Pelicula { get; set; }
+        public virtual ICollection<Pelicula> Peliculas { get; set; }
     }
 }

@@ -7,28 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CineHitss
+namespace CineHitssAPI
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Pelicula
+    public partial class Usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pelicula()
+        public Usuario()
         {
-            this.Funcions = new HashSet<Funcion>();
+            this.Boletoes = new HashSet<Boleto>();
         }
     
         public int ID { get; set; }
         public string Nombre { get; set; }
-        public string Genero { get; set; }
-        public Nullable<int> Duracion { get; set; }
-        public Nullable<int> Anio { get; set; }
-        public Nullable<int> Cine_ID { get; set; }
+        public string Correo { get; set; }
+        public Nullable<double> Puntos { get; set; }
     
-        public virtual Cine Cine { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Funcion> Funcions { get; set; }
+        public virtual ICollection<Boleto> Boletoes { get; set; }
     }
 }
