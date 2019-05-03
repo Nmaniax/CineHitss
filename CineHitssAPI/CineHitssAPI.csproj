@@ -169,7 +169,9 @@
     <Compile Include="Ciudad.cs">
       <DependentUpon>CineHitssModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CinesController.cs" />
     <Compile Include="Controllers\CiudadesController.cs" />
+    <Compile Include="Controllers\FuncionesController.cs" />
     <Compile Include="Funcion.cs">
       <DependentUpon>CineHitssModel.tt</DependentUpon>
     </Compile>
@@ -192,7 +194,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="DB\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Cines\" />
     <Folder Include="Views\Ciudades\" />
+    <Folder Include="Views\Funciones\" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="CineHitssModel.edmx">

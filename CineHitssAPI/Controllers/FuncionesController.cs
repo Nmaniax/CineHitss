@@ -8,37 +8,36 @@ using System.Web;
 using System.Web.Http;
 using CineHitssAPI;
 
+
 namespace CineHitssAPI.Controllers
 {
-    public class CiudadesController : ApiController
+    public class FuncionesController : ApiController
     {
         private CineHitssEntities db = new CineHitssEntities();
 
-        // GET: Ciudades
-        [HttpGet]
-        [Route("api/Ciudades")]
+        // GET: Funciones
         public IHttpActionResult Index()
         {
-            return Ok(db.Ciudads.ToList());
+            var funcions = new List<Funcion>();
+            funcions = db.Funcions.ToList();
+            return Ok(funcions.ToList());
         }
 
-        // GET: Ciudades/Details/5
-        [HttpGet]
-        [Route("api/Ciudades")]
+        // GET: Funciones/Details/5
         public IHttpActionResult Details(int? id)
         {
             if (id == null)
             {
                 return Conflict();
             }
-            Ciudad ciudad = db.Ciudads.Find(id);
-            if (ciudad == null)
+            Funcion funcion = db.Funcions.Find(id);
+            if (funcion == null)
             {
                 return NotFound();
             }
-            return Ok(ciudad);
+            return Ok(funcion);
         }
-        
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

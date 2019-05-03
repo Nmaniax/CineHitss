@@ -6,39 +6,49 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Http;
+using System.Net.Http;
 using CineHitssAPI;
 
 namespace CineHitssAPI.Controllers
 {
-    public class CiudadesController : ApiController
+    public class CinesController : ApiController
     {
         private CineHitssEntities db = new CineHitssEntities();
 
-        // GET: Ciudades
-        [HttpGet]
-        [Route("api/Ciudades")]
+        // GET: Cines
         public IHttpActionResult Index()
         {
-            return Ok(db.Ciudads.ToList());
+            List<Cine> cines = new List<Cine>();
+            cines = db.Cines.ToList();
+            return Ok(cines);
         }
 
-        // GET: Ciudades/Details/5
-        [HttpGet]
-        [Route("api/Ciudades")]
+        // GET: Cines/Details/5
         public IHttpActionResult Details(int? id)
         {
             if (id == null)
             {
                 return Conflict();
             }
-            Ciudad ciudad = db.Ciudads.Find(id);
-            if (ciudad == null)
+            Cine cine = db.Cines.Find(id);
+            if (cine == null)
             {
                 return NotFound();
             }
-            return Ok(ciudad);
+            return Ok(cine);
         }
-        
+
+        // GET: Cines/Details/5
+        public IHttpActionResult GetByCiudad(int id)
+        {
+            var cine = db.Cines.Include(c => c.Ciudad_ID == id);
+            if (cine == null)
+            {
+                return NotFound();
+            }
+            return Ok(cine.ToList());
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

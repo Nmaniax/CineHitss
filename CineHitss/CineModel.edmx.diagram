@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b28002d6a00f433d9cad9cabc180bd5e" Name="Diagram1">
-        <EntityTypeShape EntityType="CineHitssModel.Boleto" Width="1.5" PointX="10.125" PointY="1.75" IsExpanded="true" />
+      <Diagram DiagramId="bbc87d68278f4bf997b626a069abfd81" Name="Diagram1">
+        <EntityTypeShape EntityType="CineHitssModel.Boleto" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CineHitssModel.Cine" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CineHitssModel.Ciudad" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CineHitssModel.Funcion" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
