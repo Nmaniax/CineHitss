@@ -174,8 +174,10 @@
     <Compile Include="Ciudad.cs">
       <DependentUpon>CineModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CineFuncion.cs" />
     <Compile Include="Controllers\CineVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Funcion.cs">
       <DependentUpon>CineModel.tt</DependentUpon>
     </Compile>
@@ -184,6 +186,7 @@
     </Compile>
     <Compile Include="Helpers\CinesCiudad.cs" />
     <Compile Include="Models\CityTheaterModel.cs" />
+    <Compile Include="Models\UsuarioMdl.cs" />
     <Compile Include="Pelicula.cs">
       <DependentUpon>CineModel.tt</DependentUpon>
     </Compile>
@@ -231,6 +234,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\CineV\CiudadCine.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -247,6 +251,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\CineV\IntroView.cshtml" />
     <Content Include="Views\CineV\GetCiudades.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

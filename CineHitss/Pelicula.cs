@@ -26,6 +26,7 @@ namespace CineHitss
         public Nullable<int> Duracion { get; set; }
         public Nullable<int> Anio { get; set; }
         public Nullable<int> Cine_ID { get; set; }
+        public bool Estado { get; set; }
     
         public virtual Cine Cine { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

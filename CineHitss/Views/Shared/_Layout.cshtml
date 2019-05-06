@@ -1,13 +1,12 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
-        .brand-Colors {
+    <style type="text/css">
+        a.brand-Colors {
             float: left;
             height: 50px;
             padding: 15px 15px;
@@ -15,26 +14,43 @@
             line-height: 20px;
             color: #000000;
         }
-        .colors-class{
-            color: #000000;
+        a.colores-viento {
+            color: #000000 !important;
         }
 
+        a.colores-viento:hover {
+            color: #FFF !important;
+        }
     </style>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" style="background:#0787AD; color: black">
         <div class="container">
             <div class="navbar-header" style="color: black; background: #0787AD;">
-                @Html.ActionLink("CineHitss", "IntroView", "CineV", new { area = "" }, new { @class = "brand-Colors" })
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CineHitss", "GetCiudades", "CineV", null, new { @class = "brand-Colors" })
             </div>
             <div class="navbar-collapse collapse" style="color: black; background: #0787AD">
-                <ul class="nav navbar-nav" style="color: black">
-                    <li>@Html.ActionLink("Ingresar", "Index", "Home", null, new { @style = "color:#000000" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", null, new { @style = "color:#000000" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @style = "color:#000000" })</li>
-                    <li>@Html.ActionLink("Cine", "GetCiudades", "CineV", null, new { @style = "color:#000000" })</li>
-                </ul>
-                </ul>
+                    @if (Session["ID"] != null)
+                    {
+                        <p class="navbar-text" style="color:black;">Bienvenido @Session["Nombre"].ToString()</p>
+                        <ul class ="nav navbar-nav" style="color: black">
+                            <li>@Html.ActionLink("Cine", "GetCiudades", "CineV", null, new{ @class="colores-viento" })</li>
+                            <li>@Html.ActionLink("Cerrar Sesion", "LogOut", "User", null, new{ @class="colores-viento" })</li>
+                        </ul>
+                    }
+                    @if (Session["ID"] == null)
+                    {
+                        <p class="navbar-text" style="color:black; ">Bienvenido</p>
+                        <ul class="nav navbar-nav" style="color: black;">
+                            <li>@Html.ActionLink("Cine", "GetCiudades", "CineV", null, new { @class = "colores-viento" })</li>
+                            <li>@Html.ActionLink("Ingresar", "Login", "User", null, new { @class = "colores-viento" })</li>
+                        </ul>
+                        }
             </div>
         </div>
     </div>
@@ -50,4 +66,3 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
-</html>

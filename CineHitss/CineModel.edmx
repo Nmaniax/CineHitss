@@ -52,6 +52,7 @@
           <Property Name="Duracion" Type="int" />
           <Property Name="Anio" Type="int" />
           <Property Name="Cine_ID" Type="int" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -221,6 +222,7 @@
           <Property Name="Cine_ID" Type="Int32" />
           <NavigationProperty Name="Cine" Relationship="Self.FK__Pelicula__Cine_I__15502E78" FromRole="Pelicula" ToRole="Cine" />
           <NavigationProperty Name="Funcions" Relationship="Self.FK__Funcion__Pelicul__182C9B23" FromRole="Pelicula" ToRole="Funcion" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -381,6 +383,7 @@
           <EntitySetMapping Name="Peliculas">
             <EntityTypeMapping TypeName="CineHitssModel.Pelicula">
               <MappingFragment StoreEntitySet="Pelicula">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Genero" ColumnName="Genero" />

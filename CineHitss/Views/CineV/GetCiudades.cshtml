@@ -7,18 +7,19 @@
     .prueba {
     }
 </style>
+<script src="~/Views/CineV/CiudadCine.js"></script>
 
 <div class="jumbotron">
     <h1>CineHitss</h1>
     <p class="lead">Technology Experience.</p>
     <p>Elige tu ciudad: </p>
-    <select>
+    
+    <select id="dCity">
     @foreach (var m in Model)
     {
-
-        <option value=@m.Nombre>@m.Nombre</option>
+        <option id= value=@m.Nombre>@m.Nombre</option>
     }
     </select>
-    <p><input type="button" value="Buscar" /></p>
+    <p><input type="button" value="Buscar" onclick="getCity()"/></p>
 </div>
 
